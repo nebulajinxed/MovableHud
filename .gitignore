@@ -1,0 +1,14 @@
+# Gradle
+.gradle/
+build/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Minecraft run folder
+run/
+
+# OS
+.DS_Store
+Thumbs.db
