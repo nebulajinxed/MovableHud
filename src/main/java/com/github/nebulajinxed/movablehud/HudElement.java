@@ -1,4 +1,4 @@
-package net.nebula.movablehud;
+package com.github.nebulajinxed.movablehud;
 
 import net.minecraft.client.gui.DrawContext;
 

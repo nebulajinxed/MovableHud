@@ -11,7 +11,7 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "net.nebula.movablehud.MovableHudClient"
+      "com.github.nebulajinxed.movablehud.MovableHudClient"
     ],
     "main": [
     ]

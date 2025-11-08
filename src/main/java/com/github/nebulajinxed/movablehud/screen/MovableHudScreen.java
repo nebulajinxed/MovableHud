@@ -1,13 +1,13 @@
-package net.nebula.movablehud.screen;
+package com.github.nebulajinxed.movablehud.screen;
 
 import com.google.gson.*;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.Text;
-import net.nebula.movablehud.HudElement;
-import net.nebula.movablehud.HudRegistry;
-import net.nebula.movablehud.MovableHudClient;
+import com.github.nebulajinxed.movablehud.HudElement;
+import com.github.nebulajinxed.movablehud.HudRegistry;
+import com.github.nebulajinxed.movablehud.MovableHudClient;
 import org.joml.Matrix3x2fStack;
 
 import java.io.*;

@@ -1,11 +1,11 @@
-package net.nebula.movablehud;
+package com.github.nebulajinxed.movablehud;
 
 import com.mojang.brigadier.Command;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
-import net.nebula.movablehud.screen.MovableHudScreen;
+import com.github.nebulajinxed.movablehud.screen.MovableHudScreen;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;

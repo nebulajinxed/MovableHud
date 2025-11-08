@@ -1,9 +1,7 @@
-package net.nebula.movablehud;
+package com.github.nebulajinxed.movablehud;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.nebula.movablehud.hudElements.Example2Hud;
-import net.nebula.movablehud.hudElements.ExampleHud;
-import net.nebula.movablehud.screen.MovableHudScreen;
+import com.github.nebulajinxed.movablehud.screen.MovableHudScreen;
 
 public class MovableHudClient implements ClientModInitializer {
     public static String MODID = "movablehud";

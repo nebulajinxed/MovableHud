@@ -1,9 +1,9 @@
-package net.nebula.movablehud.hudElements;
+package com.github.nebulajinxed.movablehud.hudElements;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
-import net.nebula.movablehud.HudElement;
-import net.nebula.movablehud.MovableHudClient;
+import com.github.nebulajinxed.movablehud.HudElement;
+import com.github.nebulajinxed.movablehud.MovableHudClient;
 
 public class Example2Hud implements HudElement {
     private int x = 30, y = 50;

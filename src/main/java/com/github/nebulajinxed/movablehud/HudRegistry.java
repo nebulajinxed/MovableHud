@@ -1,9 +1,9 @@
-package net.nebula.movablehud;
+package com.github.nebulajinxed.movablehud;
 
 import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.util.Identifier;
-import net.nebula.movablehud.screen.MovableHudScreen;
+import com.github.nebulajinxed.movablehud.screen.MovableHudScreen;
 import org.joml.Matrix3x2fStack;
 
 import java.util.*;
