@@ -4,8 +4,9 @@ plugins {
     id "com.vanniktech.maven.publish" version "0.34.0"
 }
 
-version = project.mod_version
-group = project.maven_group
+group = 'com.github.nebulajinxed'  // replace with your GitHub username
+version = '1.0.0'                     // tag version
+
 
 base {
     archivesName = project.archives_base_name
@@ -13,11 +14,8 @@ base {
 
 
 repositories {
-    // Add repositories to retrieve artifacts from in here.
-    // You should only use this when depending on other mods because
-    // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-    // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-    // for more information about repositories.
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -86,35 +84,5 @@ publishing {
         // Notice: This block does NOT have the same function as the block in the top level.
         // The repositories here will be used for publishing your artifact, not for
         // retrieving dependencies.
-    }
-}
-
-mavenPublishing {
-    coordinates(group.toString(), archives_base_name.toString(), mod_version.toString())
-
-    pom {
-        name = "My Library"
-        description = "A description of what my library does."
-        inceptionYear = "2020"
-        url = "https://github.com/username/mylibrary/"
-        licenses {
-            license {
-                name = "The Apache License, Version 2.0"
-                url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
-                distribution = "http://www.apache.org/licenses/LICENSE-2.0.txt"
-            }
-        }
-        developers {
-            developer {
-                id = "username"
-                name = "User Name"
-                url = "https://github.com/username/"
-            }
-        }
-        scm {
-            url = "https://github.com/username/mylibrary/"
-            connection = "scm:git:git://github.com/username/mylibrary.git"
-            developerConnection = "scm:git:ssh://git@github.com/username/mylibrary.git"
-        }
     }
 }
