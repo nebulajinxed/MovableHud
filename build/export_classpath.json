@@ -1,0 +1,20 @@
+{
+  "projectPath": ":",
+  "classpaths": {
+    "test": [
+      "C:\\Users\\jaspe\\IdeaProjects\\MovableHud\\build\\classes\\java\\test",
+      "C:\\Users\\jaspe\\IdeaProjects\\MovableHud\\build\\resources\\test",
+      "C:\\Users\\jaspe\\IdeaProjects\\MovableHud\\out\\production\\MovableHud.test",
+      "C:\\Users\\jaspe\\IdeaProjects\\MovableHud\\out\\test\\classes",
+      "C:\\Users\\jaspe\\IdeaProjects\\MovableHud\\out\\test\\resources"
+    ],
+    "main": [
+      "C:\\Users\\jaspe\\IdeaProjects\\MovableHud\\build\\classes\\java\\main",
+      "C:\\Users\\jaspe\\IdeaProjects\\MovableHud\\build\\resources\\main",
+      "C:\\Users\\jaspe\\IdeaProjects\\MovableHud\\build\\devlibs\\MovableHud-1.0.0-dev.jar",
+      "C:\\Users\\jaspe\\IdeaProjects\\MovableHud\\out\\production\\MovableHud.main",
+      "C:\\Users\\jaspe\\IdeaProjects\\MovableHud\\out\\production\\classes",
+      "C:\\Users\\jaspe\\IdeaProjects\\MovableHud\\out\\production\\resources"
+    ]
+  }
+}

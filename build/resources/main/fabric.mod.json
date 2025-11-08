@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "movablehud",
+  "version": "1.0.0",
+  "name": "MovableHud",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/movablehud/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.nebula.movablehud.MovableHudClient"
+    ],
+    "main": [
+    ]
+  },
+  "mixins": [
+    "movablehud.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.17.3",
+    "fabric": "*",
+    "minecraft": "1.21.8"
+  }
+}
