@@ -1,5 +1,7 @@
 package com.github.nebulajinxed.movablehud;
 
+import com.github.nebulajinxed.movablehud.hudElements.Example2Hud;
+import com.github.nebulajinxed.movablehud.hudElements.ExampleHud;
 import net.fabricmc.api.ClientModInitializer;
 import com.github.nebulajinxed.movablehud.screen.MovableHudScreen;
 

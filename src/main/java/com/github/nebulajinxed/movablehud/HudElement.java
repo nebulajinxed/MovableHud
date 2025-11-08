@@ -17,4 +17,5 @@ public interface HudElement {
     void setPosition(int x, int y);
     void setColor(int color);
     void setScale(float scale);
+    void setText(String text);
 }

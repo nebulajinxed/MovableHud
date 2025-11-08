@@ -35,4 +35,5 @@ public class ExampleHud implements HudElement {
     public void setPosition(int x, int y) { this.x = x; this.y = y; }
     public void setColor(int color) { this.color = color; }
     public void setScale(float scale) { this.scale = scale; }
+    public void setText(String text) { this.text = text; }
 }

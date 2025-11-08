@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
   "id": "movablehud",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "name": "MovableHud",
   "description": "",
-  "authors": [],
+  "authors": ["Nebulajixned"],
   "contact": {},
   "license": "All-Rights-Reserved",
   "icon": "assets/movablehud/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "net.nebula.movablehud.MovableHudClient"
+      "com.github.nebulajinxed.movablehud.MovableHudClient"
     ],
     "main": [
     ]
