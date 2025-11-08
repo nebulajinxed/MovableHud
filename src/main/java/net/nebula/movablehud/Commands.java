@@ -25,7 +25,7 @@ public class Commands {
             );
         }));
     }
-    git submodule deinit -f src
+
     public static void OpenScreen(Screen screen) {
         SCHEDULER.schedule(() ->
                         MinecraftClient.getInstance().execute(() ->
