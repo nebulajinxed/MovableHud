@@ -1,14 +1,23 @@
 [
   {
+    "type": "text",
     "id": "example",
-    "x": 196,
-    "y": 85,
-    "scale": 2.8369565
+    "x": 99,
+    "y": 111,
+    "scale": 2.4029415
   },
   {
+    "type": "text",
     "id": "example2",
-    "x": 201,
-    "y": 138,
-    "scale": 1.8159723
+    "x": 98,
+    "y": 95,
+    "scale": 1.0
+  },
+  {
+    "type": "img",
+    "id": "exampleimage",
+    "x": 256.0,
+    "y": 137.0,
+    "scale": 1.9743373
   }
 ]

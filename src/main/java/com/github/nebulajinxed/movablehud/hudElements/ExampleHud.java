@@ -2,20 +2,20 @@ package com.github.nebulajinxed.movablehud.hudElements;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
-import com.github.nebulajinxed.movablehud.HudElement;
+import com.github.nebulajinxed.movablehud.TextHudElement;
 import com.github.nebulajinxed.movablehud.MovableHudClient;
+import net.minecraft.util.Identifier;
 
-public class ExampleHud implements HudElement {
+public class ExampleHud implements TextHudElement {
     private int x = 10, y = 10;
     private String text = "Hello HUD";
     private int color = 0xFFFFFFFF;
     private boolean hasShadow = false;
     private String Id = "example";
 
-    private float scale = 1;
+    private static final Identifier TARGET_TEXTURE = Identifier.of("minecraft", "textures/block/target_top.png");
 
-    @Override
-    public String getNamespace() { return MovableHudClient.MODID; }
+    private float scale = 1;
 
     @Override
     public void render(DrawContext ctx, int x, int y, float delta) {

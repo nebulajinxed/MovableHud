@@ -7,13 +7,11 @@
   "authors": ["Nebulajixned"],
   "contact": {},
   "license": "All-Rights-Reserved",
-  "icon": "assets/movablehud/icon.png",
+  "icon": "icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
       "com.github.nebulajinxed.movablehud.MovableHudClient"
-    ],
-    "main": [
     ]
   },
   "mixins": [
@@ -22,6 +20,6 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "~1.21.8"
   }
 }
