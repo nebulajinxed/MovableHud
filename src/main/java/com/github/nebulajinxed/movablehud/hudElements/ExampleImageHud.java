@@ -20,9 +20,7 @@ public class ExampleImageHud implements ImageHudElement {
     public void render(DrawContext context, int x, int y) {
         Matrix3x2fStack m = context.getMatrices();
         m.pushMatrix();
-//        m.translate(getX() - ((getWidth() * getScale()) / 2), getY() - ((getHeight() * getScale()) / 2));
         m.scale(getScale(), getScale());
-//        context.drawTexture(RenderPipelines.GUI_TEXTURED, texture, 0, 0, (float) 0, (float) 0, (int) getWidth(), (int) getWidth(), (int) getWidth(), (int) getWidth());
         context.drawTexture(RenderPipelines.GUI_TEXTURED, texture, 0, 0, 0, 0, width, height, width, height);
         m.popMatrix();
     }
