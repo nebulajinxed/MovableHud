@@ -23,6 +23,8 @@ public class ExampleImageHud implements ImageHudElement {
         m.scale(getScale(), getScale());
         context.drawTexture(RenderPipelines.GUI_TEXTURED, texture, 0, 0, 0, 0, width, height, width, height);
         m.popMatrix();
+
+        // Or any image you'd like
     }
 
     public float getX() { return this.x; }
