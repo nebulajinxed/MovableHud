@@ -3,7 +3,7 @@
   "id": "movablehud",
   "version": "${version}",
   "name": "MovableHud",
-  "description": "",
+  "description": "Library for movable Huds",
   "authors": ["Nebulajixned"],
   "contact": {},
   "license": "All-Rights-Reserved",
