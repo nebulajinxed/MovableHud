@@ -16,14 +16,14 @@ public class Commands {
     public static final ScheduledExecutorService SCHEDULER = Executors.newSingleThreadScheduledExecutor();
 
     public static void register() {
-        ClientCommandRegistrationCallback.EVENT.register(((commandDispatcher, commandRegistryAccess) -> {
+        ClientCommandRegistrationCallback.EVENT.register((commandDispatcher, commandRegistryAccess) -> {
             commandDispatcher.register(ClientCommandManager.literal("movableHud")
                     .executes(ctx -> {
                         OpenScreen(new MovableHudScreen());
                         return Command.SINGLE_SUCCESS;
                     })
             );
-        }));
+        });
     }
 
     public static void OpenScreen(Screen screen) {
@@ -34,4 +34,5 @@ public class Commands {
                 50, TimeUnit.MILLISECONDS
         );
     }
+    // This is a test message for git testing
 }
