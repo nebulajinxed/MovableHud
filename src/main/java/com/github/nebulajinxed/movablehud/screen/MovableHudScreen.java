@@ -1,5 +1,6 @@
 package com.github.nebulajinxed.movablehud.screen;
 
+import com.github.nebulajinxed.movablehud.CustomHudElement;
 import com.github.nebulajinxed.movablehud.ImageHudElement;
 import com.google.gson.*;
 import net.minecraft.client.MinecraftClient;
@@ -50,6 +51,10 @@ public class MovableHudScreen extends Screen {
             m.translate(e.getX() - ((e.getWidth() / 2) * e.getScale()), e.getY() - ((e.getHeight() / 2) * e.getScale()));
             e.render(context, 0, 0);
             m.popMatrix();
+        }
+
+        for (CustomHudElement e : HudRegistry.CUSTOMELEMENTS) {
+            e.render(context);
         }
     }
 

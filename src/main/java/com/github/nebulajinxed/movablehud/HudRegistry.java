@@ -12,6 +12,7 @@ import java.util.*;
 public class HudRegistry {
     public static final List<TextHudElement> TEXTELEMENTS = new ArrayList<>();
     public static final List<ImageHudElement> IMAGEELEMENTS = new ArrayList<>();
+    public static final List<CustomHudElement> CUSTOMELEMENTS = new ArrayList<>();
     static MinecraftClient client = MinecraftClient.getInstance();
 
     public static void registerText(TextHudElement element, String name) {
@@ -39,6 +40,15 @@ public class HudRegistry {
             m.scale(element.getScale(), element.getScale());
             context.drawTexture(RenderPipelines.GUI_TEXTURED, element.getTexture(), 0, 0, (float) 0, (float) 0, (int) element.getWidth(), (int) element.getWidth(), (int) element.getWidth(), (int) element.getWidth());
             m.popMatrix();
+        });
+    }
+
+    public static void registerCustom(CustomHudElement element, Identifier name) {
+        CUSTOMELEMENTS.add(element);
+        HudElementRegistry.addLast(name, (context, tickCounter) -> {
+            if (Objects.equals(client.currentScreen, new MovableHudScreen())) return;
+
+            element.render(context);
         });
     }
 
