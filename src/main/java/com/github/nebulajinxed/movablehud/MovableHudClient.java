@@ -11,9 +11,9 @@ public class MovableHudClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        HudRegistry.registerText(new ExampleHud(), "test1");
-        HudRegistry.registerText(new Example2Hud(), "test2");
-        HudRegistry.registerImage(new ExampleImageHud(), "testimg");
+//        HudRegistry.registerText(new ExampleHud(), "test1");
+//        HudRegistry.registerText(new Example2Hud(), "test2");
+//        HudRegistry.registerImage(new ExampleImageHud(), "testimg");
         Commands.register();
         MovableHudScreen.loadHudData();
     }
