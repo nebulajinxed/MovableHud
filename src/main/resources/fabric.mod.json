@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "movablehud",
+  "version": "${version}",
+  "name": "MovableHud",
+  "description": "Library for movable Huds",
+  "authors": ["Nebulajixned"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.github.nebulajinxed.movablehud.MovableHudClient"
+    ]
+  },
+  "mixins": [
+    "movablehud.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "~1.21.8"
+  }
+}
