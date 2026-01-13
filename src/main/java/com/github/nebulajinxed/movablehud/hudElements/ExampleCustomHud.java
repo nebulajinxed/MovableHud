@@ -18,17 +18,19 @@ public class ExampleCustomHud implements CustomHudElement {
 
     private float scale = 1;
 
+    // All rendering logic
     @Override
     public void render(DrawContext DrawCtx) {
         Matrix3x2fStack m = DrawCtx.getMatrices();
         m.pushMatrix();
         m.translate(x, y);
-        m.translate(-(width * scale / 2) , -(height * scale / 2));
+        m.translate(-(width * scale / 2) , -(height * scale / 2)); // Translating so the x and y are in the center of the object, THIS IS REQUIRED BY DRAGGING LOGIC
         m.scale(scale);
-        DrawCtx.drawTexture(RenderPipelines.GUI_TEXTURED, TARGET_TEXTURE, 0, 0, 0, 0, 16, 16, 16,16, 16, 16, getColor());
+        DrawCtx.drawTexture(RenderPipelines.GUI_TEXTURED, TARGET_TEXTURE, 0, 0, 0, 0, 16, 16, 16,16, 16, 16, getColor()); // Rendering a texture with the color set before
         m.popMatrix();
     }
 
+    // This makes it so that that hidden elements are transparent while in the editing hud
     public int getColor() {
         if (hidden)
             return 0x40FFFFFF;
