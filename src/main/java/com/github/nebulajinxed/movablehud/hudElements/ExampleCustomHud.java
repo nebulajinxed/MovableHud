@@ -39,12 +39,8 @@ public class ExampleCustomHud implements CustomHudElement {
 
     public float getX() { return x; }
     public float getY() { return y; }
-    public float getHeight() {
-        return height;
-    }
-    public float getWidth() {
-        return width;
-    }
+    public float getHeight() {return height; }
+    public float getWidth() {return width; }
     public float getScale() { return scale; }
     public String getId() { return this.Id; }
 
