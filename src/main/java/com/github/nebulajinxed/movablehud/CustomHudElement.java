@@ -14,4 +14,7 @@ public interface CustomHudElement {
     void setScale(float scale);
     void toggleHidden();
     boolean isHidden();
+
+    float getOpacity();
+    void setOpacity(float opacity);
 }

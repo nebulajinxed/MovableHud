@@ -110,6 +110,39 @@ public class MovableHudScreen extends Screen {
         return super.mouseReleased(mouseX, mouseY, button);
     }
 
+
+    @Override
+    public boolean mouseScrolled(double mouseX, double mouseY, double horizontal, double vertical) {
+        for (CustomHudElement element : HudRegistry.CUSTOMELEMENTS) {
+
+            float ex = element.getX();
+            float ey = element.getY();
+            float ew = element.getWidth() * element.getScale();
+            float eh = element.getHeight() * element.getScale();
+
+            boolean hovered =
+                    mouseX >= ex - (ew / 2) && mouseX <= ex + (ew / 2) &&
+                            mouseY >= ey - (eh / 2) && mouseY <= ey + (eh / 2);
+
+            if (!hovered || element.isHidden()) continue;
+
+            if (vertical > 0) {
+                // Scroll up
+                float newOpacity = element.getOpacity() - 0.05f;
+                element.setOpacity(Math.max(0f, newOpacity));
+            } else if (vertical < 0) {
+                // Scroll down
+                float newOpacity = element.getOpacity() + 0.05f;
+                element.setOpacity(Math.min(0.8f, newOpacity));
+            }
+
+            return true;
+        }
+
+        return super.mouseScrolled(mouseX, mouseY, horizontal, vertical);
+    }
+
+
     @Override
     public void close() {
         saveHudData();
@@ -134,6 +167,7 @@ public class MovableHudScreen extends Screen {
             obj.addProperty("x", e.getX());
             obj.addProperty("y", e.getY());
             obj.addProperty("scale", e.getScale());
+            obj.addProperty("opacity", e.getOpacity());
             array.add(obj);
         }
 
@@ -158,12 +192,14 @@ public class MovableHudScreen extends Screen {
                 int x = obj.get("x").getAsInt();
                 int y = obj.get("y").getAsInt();
                 float scale = obj.get("scale").getAsFloat();
+                float opacity = obj.get("opacity").getAsFloat();
 
                 if (type.equals("custom")) {
                     CustomHudElement hud = HudRegistry.getCustomElement(id);
                     if (hud != null) {
                         hud.setPosition(x, y);
                         hud.setScale(scale);
+                        hud.setOpacity(opacity);
                     }
                 }
             }
