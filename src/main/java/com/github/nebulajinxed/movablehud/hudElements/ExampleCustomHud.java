@@ -42,7 +42,8 @@ public class ExampleCustomHud implements CustomHudElement {
 
     public void setPosition(float x, float y) { this.x = x; this.y = y; }
     public void setScale(float scale) { this.scale = scale; }
-    public void toggleHidden() {this.hidden = !this.hidden; }
+    public void toggleHidden() { this.hidden = !this.hidden; }
+    public void setHidden(boolean hidden) { this.hidden = hidden; }
     public boolean isHidden() {return this.hidden; }
 
     public float getOpacity() { return this.opacity; }

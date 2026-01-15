@@ -12,8 +12,10 @@ public interface CustomHudElement {
     String getId();
     void setPosition(float x, float y);
     void setScale(float scale);
+
     void toggleHidden();
     boolean isHidden();
+    void setHidden(boolean hidden);
 
     float getOpacity();
     void setOpacity(float opacity);

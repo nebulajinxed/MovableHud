@@ -168,6 +168,7 @@ public class MovableHudScreen extends Screen {
             obj.addProperty("y", e.getY());
             obj.addProperty("scale", e.getScale());
             obj.addProperty("opacity", e.getOpacity());
+            obj.addProperty("hidden", e.isHidden());
             array.add(obj);
         }
 
@@ -193,6 +194,7 @@ public class MovableHudScreen extends Screen {
                 int y = obj.get("y").getAsInt();
                 float scale = obj.get("scale").getAsFloat();
                 float opacity = obj.get("opacity").getAsFloat();
+                boolean hidden = obj.get("hidden").getAsBoolean();
 
                 if (type.equals("custom")) {
                     CustomHudElement hud = HudRegistry.getCustomElement(id);
@@ -200,6 +202,7 @@ public class MovableHudScreen extends Screen {
                         hud.setPosition(x, y);
                         hud.setScale(scale);
                         hud.setOpacity(opacity);
+                        hud.setHidden(hidden);
                     }
                 }
             }
