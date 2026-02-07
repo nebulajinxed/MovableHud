@@ -4,6 +4,7 @@ import com.github.nebulajinxed.movablehud.CustomHudElement;
 import com.github.nebulajinxed.movablehud.HudRegistry;
 import com.google.gson.*;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.Click;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.Text;
@@ -43,7 +44,11 @@ public class MovableHudScreen extends Screen {
     }
 
     @Override
-    public boolean mouseClicked(double mouseX, double mouseY, int button) {
+    public boolean mouseClicked(Click click, boolean doubled) {
+        double mouseX = click.x();
+        double mouseY = click.y();
+        int button = click.button();
+
         for (CustomHudElement element : HudRegistry.CUSTOMELEMENTS) {
 
             float ex = element.getX();
@@ -71,11 +76,15 @@ public class MovableHudScreen extends Screen {
                 }
             }
         }
-        return super.mouseClicked(mouseX, mouseY, button);
+        return super.mouseClicked(click, doubled);
     }
 
     @Override
-    public boolean mouseDragged(double mouseX, double mouseY, int button, double deltax, double deltay) {
+    public boolean mouseDragged(Click click, double offsetX, double offsetY) {
+        double mouseX = click.x() + offsetX;
+        double mouseY = click.y() + offsetY;
+        int button = click.button();
+
         if (draggingCustomElement != null && button == 0) {
             draggingCustomElement.setPosition((float) (mouseX - dragOffsetX), (float) (mouseY - dragOffsetY));
             return true;
@@ -94,11 +103,13 @@ public class MovableHudScreen extends Screen {
             return true;
         }
 
-        return super.mouseDragged(mouseX, mouseY, button, deltax, deltay);
+        return super.mouseDragged(click, offsetX, offsetY);
     }
 
     @Override
-    public boolean mouseReleased(double mouseX, double mouseY, int button) {
+    public boolean mouseReleased(Click click) {
+        int button = click.button();
+
         if (button == 0 && draggingCustomElement != null) {
             draggingCustomElement = null;
             return true;
@@ -107,7 +118,7 @@ public class MovableHudScreen extends Screen {
             resizingCustomElement = null;
             return true;
         }
-        return super.mouseReleased(mouseX, mouseY, button);
+        return super.mouseReleased(click);
     }
 
 

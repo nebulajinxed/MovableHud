@@ -9,7 +9,7 @@ public class MovableHudClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-//        HudRegistry.registerCustom(new ExampleCustomHud(), Identifier.of("nebuba", "inv"));
+        HudRegistry.registerCustom(new ExampleCustomHud(), Identifier.of("nebuba", "inv"));
         Commands.register();
         MovableHudScreen.loadHudData();
     }
